@@ -14,3 +14,8 @@ If the number is bigger than the number in the kth position in array we put it i
 If the number is smaller we just ignore it. 
 4) Return number at index k-1.
 
+Algorithm 3 Steps(AlgorithmSortHeap): 
+This algorithm will use Heap (minheap) structure to find kth largest number in O(NlogN) time (much faster then previous two algorithms, about Binary Heap read more in https://www.geeksforgeeks.org/binary-heap/). Heap works in this way: 
+1) It takes first k numbers insert it in heap one by one (we do k times insert operation).
+2) Take remaining numbers one by one and comparing them with min element(since we imlement minHeap the root node always includes min element among k numbers). If new numbers is bigger than the root we remove the root (perform deleteMin) and insert the new number. Otherwise, (if new number is smaller) we do nothing.
+3) Return the root element. At the end the root node will be kth largest element. 
