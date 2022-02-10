@@ -18,6 +18,11 @@ void TestBed::setAlgorithm(int type, int k) {
 		alghorithm = new AlgorithmSortK(k);
 		execute();
 	}
+	
+	if (type == 3) {
+		alghorithm = new AlgorithmSortHeap(k);
+		execute();
+	}
 }
 
 TestBed::TestBed() {
